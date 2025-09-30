@@ -1,0 +1,36 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+	position: relative;
+}
+
+button#myButton {
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+button[type = "button"] {
+	cursor: pointer;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 300px;
+}
+
+textarea {
+	width: 300px;
+	margin: auto;
+}
+
+a { 
+	position: fixed;
+	right: 1300px;
+	bottom: 700px;
+}
