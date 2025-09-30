@@ -1,33 +1,24 @@
-// script.js
-const myButton = document.getElementById('myButton');
-const mySaveButton = document.getElementById("mySaveButton")
-
-const heading = document.querySelector('h1');
-const headin2 = document.querySelector('h2');
-const heading3 = document.querySelector('h3');
-let clicks = 0;
-let liveContent = "";
-
-const myTextArea = document.getElementById('myTextArea'); 
+const rect = document.getElementById("myRect");
+let topPosition = 200; // starting top position
+let leftPosition = 200; // starting left position
 
 
-myButton.addEventListener('click', () => {
-	clicks = clicks + 1;
-    heading3.textContent = clicks;
-    myButton.style.backgroundColor = 'lightblue';
-
-});
-
-myTextArea.addEventListener("input", function() {
-	liveContent = myTextArea.value;
-});
-
-function saveText() {
-	localStorage.setItem("saveText", myTextArea.value);
-}
-window.addEventListener('load', function () {
-	const savedText = localStorage.getItem("saveText");
-	if (savedText !== null) {
-		myTextArea.value = savedText;
-	}
+document.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowUp") {
+    topPosition -= 10; // move up by 10px
+    rect.style.top = topPosition + "px";
+  }
+  if (event.key === "ArrowDown") {
+    topPosition += 10; // move down by 10px
+    rect.style.top = topPosition + "px";
+  }
+  if (event.key === "ArrowLeft") {
+    leftPosition -= 10; // move left by 10px
+    rect.style.left = leftPosition + "px";
+  }
+  if (event.key === "ArrowRight") {
+    leftPosition += 10; // move right by 10px
+    rect.style.left = leftPosition + "px";
+  }
+  
 });
