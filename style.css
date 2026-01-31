@@ -2,7 +2,7 @@
 body {
     font-family: sans-serif;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
 	position: relative;
 }
 
@@ -10,22 +10,41 @@ button#myButton {
     padding: 20px 20px;
     font-size: 16px;
     cursor: pointer;
-	position: fixed;
-	bottom: 50px;
-	left: 50%;
-	transform: translateX(-50%);
+	position: relative;
 }
 
 button[type = "button"] {
 	cursor: pointer;
-	position: fixed;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 300px;
+	position: relative;
 }
 
 textarea {
 	width: 300px;
-	margin: auto;
+	margin: 20px auto;
+	display: block;
 }
 
+a { 
+	position: fixed;
+	right: 1300px;
+	bottom: 700px;
+}
+
+.hero-section {
+	background-image: url('cool.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 150vh;
+	
+	background-size: cover;
+	background-attachment: fixed;
+	
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	gap: 40px;
+	padding-top: 100px;
+}
+	

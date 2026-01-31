@@ -3,7 +3,7 @@ const myButton = document.getElementById('myButton');
 const mySaveButton = document.getElementById("mySaveButton")
 
 const heading = document.querySelector('h1');
-const heading2 = document.querySelector('h2');
+const headin2 = document.querySelector('h2');
 const heading3 = document.querySelector('h3');
 let clicks = 0;
 let liveContent = "";
@@ -31,4 +31,3 @@ window.addEventListener('load', function () {
 		myTextArea.value = savedText;
 	}
 });
-
